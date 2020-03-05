@@ -1,0 +1,24 @@
+{
+  "name": "tapthat",
+  "version": "1.0.0",
+  "description": "Got Beer?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HOWBZR/TapThat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HOWBZR/TapThat/issues"
+  },
+  "homepage": "https://github.com/HOWBZR/TapThat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.5"
+  }
+}
