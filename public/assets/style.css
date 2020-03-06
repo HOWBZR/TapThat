@@ -1,9 +1,12 @@
 .container {
   max-width: 960px;
+  justify-content: center;
 }
 .jumbotron {
+  left: 100px;
   background-color: #fafafa;
   text-align: center;
+  justify-content: center;
 }
 
 body
@@ -22,7 +25,7 @@ font-family: 'Righteous', cursive;
   padding-top: 190px;
 }
 
-@media (min-width: 1200px)
+/* @media (min-width: 1200px)
 .container, .container-lg, .container-md, .container-sm, .container-xl {
   max-width: 1140px;
 }
@@ -57,7 +60,7 @@ font-family: 'Righteous', cursive;
 @media (min-width: 576px)
 .container {
   max-width: 540px;
-}
+} */
 
 
 
