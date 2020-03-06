@@ -1,0 +1,64 @@
+body {
+    background-image: url("craft-beer-bg.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbo-style {
+    background-color: #000000e5;
+    color: white;
+    margin: 10px;
+    justify-content: center;
+}
+
+.btn-bubble {
+  color: white;
+  background-color: #c15911;
+  background-repeat: no-repeat;
+  border: none;
+}
+.btn-bubble:hover, .btn-bubble:focus {
+  animation: bubbles 1s forwards ease-out;
+  background: radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 8% 143%/0.51em 0.51em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 84% 45%/0.64em 0.64em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 75% 40%/1.05em 1.05em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 29% 63%/0.59em 0.59em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 12% 135%/1.15em 1.15em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 101% 95%/0.18em 0.18em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 22% 12%/0.97em 0.97em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 107% 135%/0.7em 0.7em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 63% 137%/0.26em 0.26em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 69% 101%/0.71em 0.71em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 25% 7%/0.21em 0.21em;
+  background-color: #c15911;
+  background-repeat: no-repeat;
+  color: #333333;
+}
+
+@keyframes bubbles {
+  100% {
+    background-position: 13% 47%, 87% 36%, 81% 44%, 32% 21%, 19% 52%, 107% 38%, 30% 27%, 116% 40%, 64% 34%, 79% 28%, 32% 1%;
+    box-shadow: inset 0 -6.5em 0 #ffcf83f3;
+  }
+}
+
+
+body .particletext {
+  /* text-align: center; */
+  font-size: 48px;
+  position: relative;
+}
+
+body .particletext.bubbles2 > .particle {
+  opacity: 0;
+  position: absolute;
+  background-color: #f0d68246;
+  animation: bubbles2 5s ease-in infinite;
+  border-radius: 100%;
+}
+@keyframes bubbles2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    transform: translate(0, -20%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -1000%);
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
