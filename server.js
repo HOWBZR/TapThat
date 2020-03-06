@@ -1,5 +1,5 @@
 const express = require("express");
-const exphbs = require("express-handlebars");
+
 
 const app = express();
 
@@ -10,12 +10,11 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+require("./routes/html-routes")(app)
 
 
-db.sequelize.sync().then(function () {
-    app.listen(PORT, function () {
-        console.log("Server listening on: http://localhost:" + PORT);
-    });
+app.listen(PORT, function () {
+    console.log("Server listening on: http://localhost:" + PORT);
 });
+// db.sequelize.sync().then(function () {
+// });
