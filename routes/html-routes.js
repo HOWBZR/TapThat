@@ -10,7 +10,7 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "..public/landing.html"))
     });
 
-    app.get("/", function (app) {
+    app.get("/homebrew", function (app) {
         res.sendFile(path.join(__dirname, "..public/landing.html"))
     });
 
