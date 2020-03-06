@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-
+require("./routes/html-routes")(app)
 
 
 app.listen(PORT, function () {
