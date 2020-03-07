@@ -1,14 +1,15 @@
 module.exports = function (sequelize, DataTypes) {
     const BrewPost = sequelize.define("Post", {
-        title: {
+       
+        beer: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        body: {
-            type: DataTypes.TEXT,
+        style: {
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
@@ -16,8 +17,27 @@ module.exports = function (sequelize, DataTypes) {
         },
         category: {
             type: DataTypes.STRING,
-            defaultValue: "Personal"
+            allowNull: false
+            
+        },
+        abv: {
+            type: DataTypes.DECIMAL,
+            allowNull: false,
+        },
+        description: {
+            type: DataTypes.TEXT,
+            allowNull: false,
         }
+
     });
+    BrewPost.associate = function (models) {
+        BrewPost.belongsTo(models.User, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+       
+
     return BrewPost;
 };
