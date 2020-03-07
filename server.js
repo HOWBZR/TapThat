@@ -1,6 +1,8 @@
 const express = require("express");
 const session = require("express-session");
 const passport = require("./config/passport");
+require('dotenv').config();
+console.log(process.env.APIKEY);
 
 const db = require("./models");
 const app = express();
