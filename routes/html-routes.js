@@ -6,5 +6,16 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/landing.html"));
     });
 
+    app.get("/beer", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/beer.html"));
+    });
+
+    app.get("/brewery", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/brewery.html"));
+    });
+
+    app.get("/question", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/question.html"));
+    });
 
 };
