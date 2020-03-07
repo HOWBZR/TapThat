@@ -5,9 +5,8 @@ body {
     background-size: cover;
 }
 
-.logo {
+.nav-logo {
   position: relative;
-  left: 500px;
   max-width: 200px;
   height: auto;
 }
