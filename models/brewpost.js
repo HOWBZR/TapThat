@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
-    const BrewPost = sequelize.define("Post", {
-       
+    const BrewPost = sequelize.define("BrewPost", {
+
         beer: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -18,7 +18,7 @@ module.exports = function (sequelize, DataTypes) {
         category: {
             type: DataTypes.STRING,
             allowNull: false
-            
+
         },
         abv: {
             type: DataTypes.DECIMAL,
@@ -37,7 +37,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         });
     };
-       
+
 
     return BrewPost;
 };
