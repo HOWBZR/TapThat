@@ -12,10 +12,14 @@ body {
   height: auto;
 }
 
+.nav-style {
+background-color: black;
+}
+
 .jumbo-style {
     background-color: #000000e5;
     color: white;
-    margin: 30px;
+    margin: 100px 30px 30px 30px;
     justify-content: center;
     height: 550px;
 }
