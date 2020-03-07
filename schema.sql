@@ -1,3 +1,0 @@
-DROP DATABASE IF EXISTS tapthat;
-
-CREATE DATABASE tapthat;
