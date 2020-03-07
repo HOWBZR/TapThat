@@ -5,11 +5,18 @@ body {
     background-size: cover;
 }
 
-.logo {
+.nav-logo {
   position: relative;
-  left: 500px;
   max-width: 200px;
   height: auto;
+}
+
+.nav-logo:hover, .nav-logo:focus {
+  animation: bubbles 1s forwards ease-out;
+  background: radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 8% 143%/0.51em 0.51em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 84% 45%/0.64em 0.64em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 75% 40%/1.05em 1.05em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 29% 63%/0.59em 0.59em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 12% 135%/1.15em 1.15em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 101% 95%/0.18em 0.18em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 22% 12%/0.97em 0.97em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 107% 135%/0.7em 0.7em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 63% 137%/0.26em 0.26em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 69% 101%/0.71em 0.71em, radial-gradient(circle at center, transparent 30%, #eef 60%, #eef 65%, transparent 70%) 25% 7%/0.21em 0.21em;
+  background-repeat: no-repeat;
+  /* color: #333333; */
+  color: white;
 }
 
 .nav-style {
