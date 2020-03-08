@@ -231,9 +231,9 @@ input.email, input.text.w3lpass {
 input[type="submit"] {
   font-size: .9em;
   color: #fff;
-  background: #9f4f00;
+  background: #6e3700;
   outline: none;
-  border: 1px solid #9f4f00;
+  border: 1px solid #6e3700;
   cursor: pointer;
   padding: 0.9em;
   -webkit-appearance: none;
