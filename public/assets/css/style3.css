@@ -133,10 +133,10 @@ img {
 body {
   background: #76b852;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #9f4f00, #e5a202);
-  background: -moz-linear-gradient(to top,  #9f4f00, #e5a202);
-  background: -o-linear-gradient(to top,  #9f4f00, #e5a202);
-  background: linear-gradient(to top,  #9f4f00, #e5a202);
+  background: -webkit-linear-gradient(to top, black, #9f4f00, #e5a202);
+  background: -moz-linear-gradient(to top,  black, #9f4f00, #e5a202);
+  background: -o-linear-gradient(to top,  black, #9f4f00, #e5a202);
+  background: linear-gradient(to top,  black, #9f4f00, #e5a202);
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Roboto', sans-serif;

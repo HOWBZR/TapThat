@@ -16,17 +16,6 @@
     <nav class="navbar nav-style navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <div id="navbarResponsive"></div>
-            <img src="../Images/TapThat Logo with beer small.png" class="img-fluid rounded float-left navbar-brand"
-                alt="Responsive image">
-
-
-
-
-
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
-            <!-- in div below, class="collapse navbar-collapse" is hidden unless toggle is used-->
             <a href="./landing.html"><img class="nav-logo" src="./Images/TapThat Logo with beer small.png"
                 class="img-fluid rounded float-left navbar-brand" alt="Responsive image"></a>
             <ul class="navbar-nav ml-auto">
@@ -43,17 +32,17 @@
 
     <div class="jumbotron jumbo-style padding position">
         <!-- <img class="logo" src="assets/css/TAPTHAT LOGO.png"> -->
-        <h1 class="display-4 particletext bubbles2">Find Your Beer!</h1>
+        <h1 class="display-4 particletext bubbles2">Find A Beer!</h1>
 
         <!-- Rendered Buttons will get Dumped Here  -->
         <div id="buttons-view"></div>
 
         <form id="beer-form">
-            <label for="beer-input">Add a beer here.</label>
-            <input type="text" id="beer-input"><br>
+            <!-- <label for="beer-input">Add a beer here.</label> -->
+            <input type="text" id="beer-input" placeholder="Add a beer here">
 
-            <!-- Button triggers new movie to be added -->
-            <input id="add-beer" type="submit" value="Add a beer here!">
+            <!-- Button triggers new beer to be added -->
+            <input id="add-beer" class="btn-bubble btn-sm" type="submit" value="Add!">
         </form>
 
         <div id="beers-view"></div>
@@ -96,14 +85,7 @@
         <p class="lead text-warning">Lets get your beer today.</p>
         <hr class="my-4">
         <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
-        <a class="btn btn-bubble btn-primary btn-lg" href="/public/landing.html" role="button">Learn more</a>
-        <h1 class="display-4 particletext bubbles2">Find A Beer</h1>
-        <p class="lead text-warning">This is a simple hero unit, a simple jumbotron-style component for calling extra
-            attention
-            to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-bubble btn-primary btn-lg" href="./landing.html" role="button">Learn more</a>
+        <a class="btn btn-bubble btn-primary btn-lg" href="./landing.html" role="button">Home</a>
     </div>
 
     <footer class="py-3 nav-style">
