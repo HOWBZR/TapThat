@@ -31,7 +31,7 @@ module.exports = function (sequelize, DataTypes) {
 
     });
     BrewPost.associate = function (models) {
-        BrewPost.belongsTo(models.User, {
+        BrewPost.belongsTo(models.Users, {
             foreignKey: {
                 allowNull: false
             }
