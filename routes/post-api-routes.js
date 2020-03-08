@@ -1,21 +1,18 @@
 const db = require("../models");
-require('dotenv').config();
-console.log(process.env.APIKEY);
+const passport = require("../config/passport");
 
-const url = "https://sandbox-api.brewerydb.com/v2/beers/?key=" + process.env.APIKEY;
-
-module.exports = function(app) {
-
-    app.get("api/posts", function(req, res) {
-        db.Post.findAll({})
-            .then(function(dbPost) {
-                res.json(dbPost);
+module.exports = function (app) {
+    app.post("/api/signup", function (req, res) {
+        db.Users.create({
+            email: req.body.email,
+            password: req.body.password,
+            username: req.body.username
+        })
+            .then(function () {
+                res.redirect(307).json(err);
+            })
+            .catch(function (err) {
+                res.status(401).json(err);
             });
-    }); 
-
-app.get("/getinfo", function(req, res) {
-    
-})
-
-
-}
+    });
+};
