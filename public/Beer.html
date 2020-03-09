@@ -31,62 +31,17 @@
     <!--end nav-->
 
     <div class="jumbotron jumbo-style padding position">
-        <!-- <img class="logo" src="assets/css/TAPTHAT LOGO.png"> -->
-        <h1 class="display-4 particletext bubbles2">Find A Beer!</h1>
-
-        <!-- Rendered Buttons will get Dumped Here  -->
-        <div id="buttons-view"></div>
-
-        <form id="beer-form">
-            <!-- <label for="beer-input">Add a beer here.</label> -->
-            <input type="text" id="beer-input" placeholder="Add a beer here">
-
-            <!-- Button triggers new beer to be added -->
-            <input id="add-beer" class="btn-bubble btn-sm" type="submit" value="Add!">
-        </form>
-
-        <div id="beers-view"></div>
-
-        <script type="text/javascript">
-            const beerStyles = [];
-
-            function displayBeerInfo(cheers) {
-
-                const beer = $(this).attr("data-name");
-
-                // const apikey = 
-                // const queryURL = 'https://sandbox-api.brewerydb.com/v2/beers/?key=' + apikey;
-
-                $.ajax({
-                    url: queryURL,
-                    method: "GET",
-                    crossDomain: true,
-                    //   dataType: 'jsonp',
-                    beforeSend: function (xhr) {
-                        xhr.withCredentials = true;
-                    }
-                }).then(function (response) {
-                    // response.setHeader("Set-Cookie", "HttpOnly;Secure;SameSite=Strict");
-                    $("#beers-view").text(JSON.stringify(response));
-                });
-            }
-
-            $("#add-beer").on("click", function (event) {
-                event.preventDefault();
-
-                // This line grabs the input from the textbox
-                const beer = $("#beer-input").val().trim();
-
-                displayBeerInfo(beer);
-            });
-
-        </script>
-
-        <p class="lead text-warning">Lets get your beer today.</p>
+        <h1 class="display-4 particletext bubbles2">Find Your Beer!</h1>
+        <p class="lead text-warning">This is a simple hero unit, a simple jumbotron-style component for calling extra
+            attention
+            to featured content or information.</p>
         <hr class="my-4">
-        <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
-        <a class="btn btn-bubble btn-primary btn-lg" href="./landing.html" role="button">Home</a>
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    
+        <a class="btn btn-bubble btn-primary btn-lg" role="button" id="submit">Find a
+            beer</a>
     </div>
+    <div id="box" class="card w-50 mx-auto"></div>
 
     <footer class="py-3 nav-style">
         <div class="container">
@@ -96,8 +51,8 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/public/assets/css/bubbles.js"></script>
     <script type="text/javascript" src="./assets/css/bubbles.js"></script>
+    <script type="text/javascript" src="./js/beer.js"></script>
 
 
 </body>
