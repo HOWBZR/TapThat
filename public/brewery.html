@@ -16,10 +16,11 @@
         <div class="container">
             <div id="navbarResponsive"></div>
             <a href="./landing.html"><img class="nav-logo" src="./Images/TapThat Logo with beer small.png"
-                class="img-fluid rounded float-left navbar-brand" alt="Responsive image"></a>
+                    class="img-fluid rounded float-left navbar-brand" alt="Responsive image"></a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="./signUp.html" data-toggle="modal" data-target="#exampleModalScrollable">Sign Up
+                    <a class="nav-link" href="./signUp.html" data-toggle="modal"
+                        data-target="#exampleModalScrollable">Sign Up
                         <span class="sr-only"></span>
                     </a>
                 </li>
@@ -36,8 +37,13 @@
             to featured content or information.</p>
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-bubble btn-primary btn-lg" href="./landing.html" role="button">Learn more</a>
+        <form action="#" method="post" class="signup">
+            <input class="text" type="number" placeholder="zipcode" id="zip" required="">
+        </form>
+        <a class="btn btn-bubble btn-primary btn-lg" role="button" id="submit">Find a
+            brewery</a>
     </div>
+    <div id="box" class="card w-50 mx-auto"></div>
 
     <footer class="py-3 nav-style">
         <div class="container">
@@ -48,6 +54,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./assets/css/bubbles.js"></script>
+    <script type="text/javascript" src="./js/brewery.js"></script>
 
 
 </body>
