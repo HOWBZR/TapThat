@@ -15,4 +15,12 @@ module.exports = function (app) {
                 res.status(401).json(err);
             });
     });
+
+    app.post('/send', function (req, res, next) {
+        // we know that the req.body will contain three key-value pairs:
+        req.body.username
+        req.body.email
+        req.body.password
+    });
+
 };
