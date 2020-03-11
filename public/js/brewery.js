@@ -18,7 +18,7 @@ $(document).ready(function () {
 
                 $('#box').append(
                     $('<div/>')
-                        .addClass("card-body border")
+                        .addClass("card-body")
                 );
                 $('#box').append(
                     $('<h5/>')
@@ -28,7 +28,7 @@ $(document).ready(function () {
                 $('#box').append(
                     $('<img/>')
                         .attr('src', res.data[i].brewery.images.medium)
-                    // .width(50)
+                    
                 )
                 $('#box').append(
                     $('<p/>')
