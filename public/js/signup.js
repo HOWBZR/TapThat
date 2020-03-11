@@ -37,11 +37,11 @@ $(document).ready(function () {
             username: username
         })
             .then(function (data) {
-                sendEmail();
+                // sendEmail();
                 window.location.replace("localhost:8080/");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
-            .catch(handleLoginErr);
+            .catch((err)=> console.log(err));
     }
     function handleLoginErr(err) {
         $("#alert .msg").text(err.responseJSON);
