@@ -37,16 +37,20 @@ $(document).ready(function () {
             username: username
         })
             .then(function (data) {
-                sendEmail();
+
+                // sendEmail();
                 window.location.replace("localhost:8080/");
-                // If there's an error, handle it by throwing up a bootstrap alert
+                console.log(data);// If there's an error, handle it by throwing up a bootstrap alert
             })
-            .catch(console.log(err));
+            .catch((err)=>console.log(err));
+            
+
     }
     function handleLoginErr(err) {
         $("#alert .msg").text(err.responseJSON);
         $("#alert").fadeIn(500);
     }
+
 
 
     function sendEmail(name, email, message) {
@@ -70,6 +74,7 @@ $(document).ready(function () {
                 console.error('here is the error: ', err);
             })
     }
+
 
 
     

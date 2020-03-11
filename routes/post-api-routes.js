@@ -16,11 +16,13 @@ module.exports = function (app) {
             });
     });
 
+
     app.post('/send', function (req, res, next) {
         // we know that the req.body will contain three key-value pairs:
         req.body.username
         req.body.email
         req.body.password
     });
+
 
 };
