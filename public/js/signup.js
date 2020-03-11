@@ -41,7 +41,7 @@ $(document).ready(function () {
                 window.location.replace("localhost:8080/");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
-            .catch(handleLoginErr);
+            .catch(console.log(err));
     }
     function handleLoginErr(err) {
         $("#alert .msg").text(err.responseJSON);
