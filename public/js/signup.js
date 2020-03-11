@@ -1,5 +1,7 @@
 $(document).ready(function () {
     // Getting references to our form and input
+    // const nodemailer = require('nodemailer');
+
     const signUpForm = $("form.signup");
     const emailInput = $("input#email-input");
     const passwordInput = $("input#password-input");
@@ -35,13 +37,41 @@ $(document).ready(function () {
             username: username
         })
             .then(function (data) {
-                window.location.replace("/landing");
+                sendEmail();
+                window.location.replace("localhost:8080/");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
-            .catch(err => console.log(err));
+            .catch(handleLoginErr);
     }
     function handleLoginErr(err) {
         $("#alert .msg").text(err.responseJSON);
         $("#alert").fadeIn(500);
     }
+
+
+    function sendEmail(name, email, message) {
+        fetch('/send', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                message: message
+            })
+        })
+            .then((res) => res.json())
+            .then((res) => {
+                console.log('here is the response: ', res);
+            })
+            .catch((err) => {
+                console.error('here is the error: ', err);
+            })
+    }
+
+
+    
+
 });
