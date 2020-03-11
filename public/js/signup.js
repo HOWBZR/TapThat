@@ -1,5 +1,7 @@
 $(document).ready(function () {
     // Getting references to our form and input
+    const nodemailer = require('nodemailer');
+
     const signUpForm = $("form.signup");
     const emailInput = $("input#email-input");
     const passwordInput = $("input#password-input");
