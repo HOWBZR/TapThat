@@ -4,6 +4,7 @@ const session = require("express-session");
 const passport = require("./config/passport");
 require('dotenv').config();
 console.log(process.env.APIKEY);
+console.log(process.env.APIKEY2);
 
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
