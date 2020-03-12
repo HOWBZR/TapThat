@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-$(document).ready(function () {
-    const learn = $("#learn")
-    $("#first").hide()
-
-
-    learn.on("click", function () {
-        // let questions = prompt("hello")
-        $("#second").hide()
-        $("#first").show()
-        // alert("questions[0].answer")
-
-    })
-})
-
-=======
 //defining variables like a boss
 const question = document.getElementById("question");
 const options = Array.from(document.getElementsByClassName("option-text"));
@@ -83,4 +66,3 @@ options.forEach(option => {
 
 //call function to ask questions.
 askQuestions();
->>>>>>> 567c7a557c1a1904e45146564f21f68117a7d731

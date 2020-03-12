@@ -36,25 +36,15 @@ $(document).ready(function () {
             password: password,
             username: username
         })
-<<<<<<< HEAD
-            .then(function (res) {
-                // sendEmail();
-                console.log(res)
-=======
             .then(function (data) {
 
                 // sendEmail();
->>>>>>> 567c7a557c1a1904e45146564f21f68117a7d731
                 window.location.replace("localhost:8080/");
                 console.log(data);// If there's an error, handle it by throwing up a bootstrap alert
             })
-<<<<<<< HEAD
-            .catch((err) => console.log(err));
-=======
-            .catch((err)=>console.log(err));
-            
+            .catch(handleLoginErr);
 
->>>>>>> 567c7a557c1a1904e45146564f21f68117a7d731
+
     }
     function handleLoginErr(err) {
         $("#alert .msg").text(err.responseJSON);
@@ -62,58 +52,53 @@ $(document).ready(function () {
     }
 
 
-<<<<<<< HEAD
-    // function sendEmail(name, email, message) {
-    //     fetch('/send', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({
-    //             name: name,
-    //             email: email,
-    //             message: message
-    //         })
-    //     })
-    //         .then((res) => res.json())
-    //         .then((res) => {
-    //             console.log('here is the response: ', res);
-    //         })
-    //         .catch((err) => {
-    //             console.error('here is the error: ', err);
-    //         })
-    // }
+
+    //START LOGIN JS---------------------------------------------------------------
 
 
+    // Getting references to our form and inputs
+    const loginForm = $("#login");
+    const emailInputL = $("#inputEmail4");
+    const passwordInputL = $("#inputPassword6");
 
-=======
+    // When the form is submitted, we validate there's an email and password entered
+    loginForm.on("click", function (event) {
+        event.preventDefault();
+        alert("working")
+        const userData = {
+            email: emailInputL.val().trim(),
+            password: passwordInputL.val().trim()
+        };
 
-    function sendEmail(name, email, message) {
-        fetch('/send', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                message: message
-            })
+        if (!userData.email || !userData.password) {
+            return;
+        }
+
+        // If we have an email and password we run the loginUser function and clear the form
+        loginUser(userData.email, userData.password);
+        emailInputL.val("");
+        passwordInputL.val("");
+    });
+
+    // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
+    function loginUser(email, password) {
+        $.post("/api/login", {
+            email: email,
+            password: password
         })
-            .then((res) => res.json())
-            .then((res) => {
-                console.log('here is the response: ', res);
+            .then(function () {
+                window.location.replace("/landing");
+                alert("working")
+                // If there's an error, log the error
             })
-            .catch((err) => {
-                console.error('here is the error: ', err);
-            })
+            .catch(function (err) {
+                console.log(err);
+            });
     }
 
 
 
-    
->>>>>>> 567c7a557c1a1904e45146564f21f68117a7d731
+
+
 
 });
