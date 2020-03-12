@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     $('#submit').on('click', function (event) {
@@ -29,6 +28,11 @@ $(document).ready(function () {
                     $('<p/>')
                         .addClass("text-center")
                         .text("ABV: " + res.data[i].abv)
+                );
+                $('#box').append(
+                    $('<h4/>')
+                        .addClass("text-center")
+                        .text("Description")
                 );
                 $('#box').append(
                     $('<p/>')
