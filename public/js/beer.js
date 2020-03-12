@@ -23,12 +23,17 @@ $(document).ready(function () {
                 $('#box').append(
                     $('<h5/>')
                         .addClass("card-title text-center")
-                        .text(res.data[i].nameDisplay)
+                        .text("Name: " + res.data[i].nameDisplay)
                 );
                 $('#box').append(
                     $('<p/>')
                         .addClass("text-center")
                         .text(res.data[i].abv)
+                );
+                $('#box').append(
+                    $('<h4/>')
+                        .addClass("text-center")
+                        .text("Description")
                 );
                 $('#box').append(
                     $('<p/>')

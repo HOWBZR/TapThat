@@ -36,12 +36,13 @@ $(document).ready(function () {
             password: password,
             username: username
         })
-            .then(function (data) {
+            .then(function (res) {
                 // sendEmail();
+                console.log(res)
                 window.location.replace("localhost:8080/");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
-            .catch((err)=> console.log(err));
+            .catch((err) => console.log(err));
     }
     function handleLoginErr(err) {
         $("#alert .msg").text(err.responseJSON);
@@ -49,29 +50,29 @@ $(document).ready(function () {
     }
 
 
-    function sendEmail(name, email, message) {
-        fetch('/send', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                message: message
-            })
-        })
-            .then((res) => res.json())
-            .then((res) => {
-                console.log('here is the response: ', res);
-            })
-            .catch((err) => {
-                console.error('here is the error: ', err);
-            })
-    }
+    // function sendEmail(name, email, message) {
+    //     fetch('/send', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify({
+    //             name: name,
+    //             email: email,
+    //             message: message
+    //         })
+    //     })
+    //         .then((res) => res.json())
+    //         .then((res) => {
+    //             console.log('here is the response: ', res);
+    //         })
+    //         .catch((err) => {
+    //             console.error('here is the error: ', err);
+    //         })
+    // }
 
 
-    
+
 
 });

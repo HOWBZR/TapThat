@@ -18,17 +18,17 @@ $(document).ready(function () {
 
                 $('#box').append(
                     $('<div/>')
-                        .addClass("card-body")
+                        .addClass("card-body opct opacity-60")
                 );
                 $('#box').append(
                     $('<h5/>')
-                        .addClass("card-title text-center")
+                        .addClass("card-title text-center opct opacity-60")
                         .text(res.data[i].brewery.name)
                 );
                 $('#box').append(
                     $('<img/>')
                         .attr('src', res.data[i].brewery.images.medium)
-                    
+
                 )
                 $('#box').append(
                     $('<p/>')
