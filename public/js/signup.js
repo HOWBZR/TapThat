@@ -36,13 +36,25 @@ $(document).ready(function () {
             password: password,
             username: username
         })
+<<<<<<< HEAD
             .then(function (res) {
                 // sendEmail();
                 console.log(res)
+=======
+            .then(function (data) {
+
+                // sendEmail();
+>>>>>>> 567c7a557c1a1904e45146564f21f68117a7d731
                 window.location.replace("localhost:8080/");
-                // If there's an error, handle it by throwing up a bootstrap alert
+                console.log(data);// If there's an error, handle it by throwing up a bootstrap alert
             })
+<<<<<<< HEAD
             .catch((err) => console.log(err));
+=======
+            .catch((err)=>console.log(err));
+            
+
+>>>>>>> 567c7a557c1a1904e45146564f21f68117a7d731
     }
     function handleLoginErr(err) {
         $("#alert .msg").text(err.responseJSON);
@@ -50,6 +62,7 @@ $(document).ready(function () {
     }
 
 
+<<<<<<< HEAD
     // function sendEmail(name, email, message) {
     //     fetch('/send', {
     //         method: 'POST',
@@ -74,5 +87,33 @@ $(document).ready(function () {
 
 
 
+=======
+
+    function sendEmail(name, email, message) {
+        fetch('/send', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                message: message
+            })
+        })
+            .then((res) => res.json())
+            .then((res) => {
+                console.log('here is the response: ', res);
+            })
+            .catch((err) => {
+                console.error('here is the error: ', err);
+            })
+    }
+
+
+
+    
+>>>>>>> 567c7a557c1a1904e45146564f21f68117a7d731
 
 });

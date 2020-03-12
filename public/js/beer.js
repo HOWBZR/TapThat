@@ -28,13 +28,24 @@ $(document).ready(function () {
                 $('#box').append(
                     $('<p/>')
                         .addClass("text-center")
-                        .text(res.data[i].abv)
+                        .text("ABV: " + res.data[i].abv)
                 );
                 $('#box').append(
                     $('<h4/>')
                         .addClass("text-center")
                         .text("Description")
                 );
+                $('#box').append(
+                    $('<p/>')
+                        .addClass("text-center")
+                        .text("IBU (bitterness): " + res.data[i].ibu)
+                );
+                $('#box').append(
+                    $('<h4/>')
+                        .addClass("text-center")
+                        .text("Description: ")
+                );
+
                 $('#box').append(
                     $('<p/>')
                         .addClass("text-center")

@@ -28,7 +28,7 @@ background-color: black;
     color: white;
     margin: 100px 30px 30px 30px;
     justify-content: center;
-    height: 550px;
+    min-height: 500px;
 }
 
 .btn-bubble {
@@ -36,6 +36,7 @@ background-color: black;
   background-color: #c15911;
   background-repeat: no-repeat;
   border: none;
+  margin: 5px;
 }
 .btn-bubble:hover, .btn-bubble:focus {
   animation: bubbles 1s forwards ease-out;
