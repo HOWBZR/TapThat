@@ -9,20 +9,36 @@ module.exports = function (app) {
             username: req.body.username
         })
             .then(function () {
-                res.redirect(307).json(err);
+                res.redirect(307, "/");
             })
             .catch(function (err) {
                 res.status(401).json(err);
             });
     });
 
-
-    app.post('/send', function (req, res, next) {
-        // we know that the req.body will contain three key-value pairs:
-        req.body.username
-        req.body.email
-        req.body.password
+    app.post("/api/login", passport.authenticate("local"), function (req, res) {
+        res.json(req.user);
     });
+
+    app.get("/api/user_data", function (req, res) {
+        if (!req.user) {
+            // The user is not logged in, send back an empty object
+            res.json({});
+        } else {
+            // Otherwise send back the user's email and id
+            // Sending back a password, even a hashed password, isn't a good idea
+            res.json({
+                email: req.user.email,
+                id: req.user.id
+            });
+        }
+    });
+
+    app.get("/logout", function (req, res) {
+        req.logout();
+        res.redirect("/");
+    });
+
 
 
 };
