@@ -14,7 +14,7 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (res) {
-            console.log(res.data)
+            // console.log(res.data)
 
             for (let i = 0; i < res.data.length; i++) {
                 let description ='Blerg';
@@ -22,43 +22,42 @@ $(document).ready(function () {
                     description = res.data[i].style.description;
                 }
 
-                $('#box').append(
-                    $('<div/>')
-                        .addClass("card-body border")
-                );
-                $('#box').append(
-                    $('<h5/>')
-                        .addClass("card-title text-center")
-                        .text("Name: " + res.data[i].nameDisplay)
-                );
-                $('#box').append(
-                    $('<p/>')
-                        .addClass("text-center")
-                        .text("ABV: " + res.data[i].abv)
-                );
-                $('#box').append(
-                    $('<h4/>')
-                        .addClass("text-center")
-                        .text("Description")
-                );
-                $('#box').append(
-                    $('<p/>')
-                        .addClass("text-center")
-                        .text("IBU (bitterness): " + res.data[i].ibu)
-                );
-                $('#box').append(
-                    $('<h4/>')
-                        .addClass("text-center")
-                        .text("Description: ")
-                );
+            $('#box').append(
+                $('<div/>')
+                    .addClass("card-body border")
+            );
+            $('#box').append(
+                $('<h3/>')
+                    .addClass("card-title text-center")
+                    .text("Name: " + res.data[i].nameDisplay)
+            );
+            $('#box').append(
+                $('<p/>')
+                    .addClass("text-center")
+                    .text("ABV: " + res.data[i].abv)
+            );
+            $('#box').append(
+                $('<p/>')
+                    .addClass("text-center")
+                    .text("SRM (color range): " + res.data[i].style.srmMin + " - " + res.data[i].style.srmMax)
+            );
+            $('#box').append(
+                $('<p/>')
+                    .addClass("text-center")
+                    .text("IBU (bitterness): " + res.data[i].ibu)
+            );
+            $('#box').append(
+                $('<h4/>')
+                    .addClass("text-center")
+                    .text("Description: ")
+            );
+            $('#box').append(
+                $('<p/>')
+                    .addClass("text-center")
+                    .text(res.data[i].style.description)
+            );
+        }
 
-                $('#box').append(
-                    $('<p/>')
-                        .addClass("text-center")
-                        .text(description)
-                );
-
-            }
-        });
     });
+});
 })
