@@ -3,6 +3,8 @@ body {
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
+    /* width: 100vw;
+    height: 100vh; */
 }
 
 .nav-logo {
@@ -49,6 +51,17 @@ background-color: black;
     margin: 150px 30px 30px 30px;
     justify-content: center;
     min-height: 500px;
+}
+
+#box {
+  background-color: black;
+  max-height: 500px;
+  overflow-y: auto;
+
+}
+
+#box-brewery {
+  background-color: white;
 }
 
 .btn-bubble {
