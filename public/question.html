@@ -42,7 +42,6 @@
 
     <div class="jumbotron jumbo-style padding position">
         <h1 class="display-4 particletext bubbles2">Let us find a beer for you...</h1>
-        <p class="lead text-warning">What are you looking for today?</p>
         <hr class="my-4">
        <!--start questions-->
 
@@ -52,31 +51,30 @@
                 <div class="quiz-box">
                     <!--this is where the question will display it is changed
             dynamically through the js-->
-                    <h2 id="question">Answer the question:</h2>
+                    <h2 id="question"></h2>
 
                     <!--these are where the answers will display, changes dynamcally through js-->
                     <div class="option-container">
-                        <p class="option-text" data-number="1">option 1</p>
-                        <!--data-number is part of the API dataset.-->
+                        
+                       
                     </div>
-                    <div class="option-container">
-                        <p class="option-text" data-number="2">option 2</p>
-                    </div>
-                    <div class="option-container">
-                        <p class="option-text" data-number="3">option 3</p>
-                    </div>
-                    <div class="option-container">
-                        <p class="option-text" data-number="4">option 4</p>
+                   
+                    <div class="beer-recommendation">
+
+
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <center><a class="btn btn-bubble btn-primary btn-lg" href="./Beer.html" role="button">Find Beers</a></center>
     </div>
        <!--end questions-->
         <footer class="py-3 nav-style">
             <div class="container">
                 <p class="m-0 text-center text-white">Copyright &copy; TAPTHAT 2020</p>
             </div>
+       
 
 
         </footer>
