@@ -17,6 +17,11 @@ $(document).ready(function () {
             // console.log(res.data)
 
             for (let i = 0; i < res.data.length; i++) {
+                let description = res.data[i].style.description;
+                if (!description) {
+                    description = "no description";
+                }
+
 
             $('#box').append(
                 $('<div/>')
@@ -50,7 +55,7 @@ $(document).ready(function () {
             $('#box').append(
                 $('<p/>')
                     .addClass("text-center")
-                    .text(res.data[i].style.description)
+                    .text(description)
             );
         }
 
