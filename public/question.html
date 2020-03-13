@@ -7,6 +7,7 @@
     <title>TapThat - Let Us Find A Beer For You</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="./assets/css/style2.css">
     <link rel="stylesheet" href="./assets/css/questionsStyle.css">
 
@@ -16,17 +17,26 @@
     <nav class="navbar nav-style navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <div id="navbarResponsive"></div>
+            <div id="logo-div">
             <a href="./landing.html"><img class="nav-logo" src="./Images/TapThat Logo with beer small.png"
-                class="img-fluid rounded float-left navbar-brand" alt="Responsive image"></a>
+                class="img-fluid rounded float-left navbar-brand" alt="Responsive image"></a> 
+                <p><a class="navlink" href="./Beer.html">find a beer</a> 
+                  <span class="dot"></span> <a class="navlink" href="./brewery.html">breweries</a> 
+                  <span class="dot"></span>  <a class="navlink" href="./question.html">recommendation</a> 
+                  <span class="dot"></span>  <a class="navlink" href="./homebrew.html">homebrews</a></p>           
+                
+                </div>
+                
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="./signUp.html" data-toggle="modal" data-target="#exampleModalScrollable">Sign Up
-                        <span class="sr-only"></span>
-                    </a>
+                    <a class="nav-link" href="./signUp.html" data-toggle="modal"
+                    data-target="#exampleModalScrollable">Sign Up
+                    <span class="sr-only"></span>
+                </a>
                 </li>
             </ul>
         </div>
-        </div>
+       
     </nav>
     <!--end nav-->
 
@@ -57,21 +67,21 @@
             </div>
         </div>
     </div>
-
        <!--end questions-->
        <center><a class="btn btn-bubble btn-primary btn-lg" href="./Beer.html" role="button">Find Beers</a></center>
     </div>
+        <footer class="py-3 nav-style">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; TAPTHAT 2020</p>
+            </div>
 
-    <footer class="py-3 nav-style">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; TAPTHAT 2020</p>
-        </div>
-    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./assets/css/bubbles.js"></script>
-    <script type="text/javascript" src="./js/questions.js"></script>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./assets/css/bubbles.js"></script>
+        <script type="text/javascript" src="./js/questions.js"></script>
 
 
 </body>
