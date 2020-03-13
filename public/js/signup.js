@@ -87,7 +87,7 @@ $(document).ready(function () {
             password: password
         })
             .then(function () {
-                window.location.replace("/landing");
+                window.location.replace("/homebrew");
                 alert("working")
                 // If there's an error, log the error
             })
