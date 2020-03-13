@@ -20,26 +20,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        
     <!-- web font -->
     <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  
     <!-- //web font -->
     <link href="./assets/css/style3.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
-
-<body>
-    <nav class="navbar nav-style navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <div id="navbarResponsive"></div>
-            <a href="./landing.html"><img class="nav-logo" src="./Images/TapThat Logo with beer small.png"
-                    class="img-fluid rounded float-left navbar-brand" alt="Responsive image"></a>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                </li>
-            </ul>
-        </div>
-        </div>
-    </nav>
+<body class="bg-dark">
+  <nav class="navbar nav-style navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+          <div id="navbarResponsive"></div>
+          <div id="logo-div">
+          <a href="./landing.html"><img class="nav-logo" src="./Images/TapThat Logo with beer small.png"
+              class="img-fluid rounded float-left navbar-brand" alt="Responsive image"></a> 
+              <p><a class="navlink" href="./Beer.html">find a beer</a> 
+                <span class="dot"></span> <a class="navlink" href="./brewery.html">breweries</a> 
+                <span class="dot"></span>  <a class="navlink" href="./question.html">recommendation</a> 
+                <span class="dot"></span>  <a class="navlink" href="./homebrew.html">homebrews</a></p>           
+              
+              </div>
+              
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <button type="button" class="btn btn-primary btn-sm btn-style" data-toggle="modal" data-target="#exampleModal">
+                  login 
+                 </button></p>
+                  <span class="sr-only"></span>
+              </a>
+              </li>
+          </ul>
+      </div>
+     
+  </nav>
     <!-- main -->
     <div class="main-w3layouts wrapper wrapper-margin">
         <h1>You know you want to TapThat...</h1>
@@ -57,7 +73,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <input type="submit" value="SIGNUP">
                 </form>
-                <p>Already have an Account? <button type="button" class="btn btn-style" data-toggle="modal" data-target="#exampleModal">
+                <p>Already have an Account? <button type="button" class="btn btn-sm btn-style" data-toggle="modal" data-target="#exampleModal">
                     login 
                    </button></p>
                 
@@ -93,24 +109,39 @@ License URL: http://creativecommons.org/licenses/by/3.0/
              <span aria-hidden="true">&times;</span>
            </button>
          </div>
-         <div class="modal-body">
-            <form class="form-inline login">
+         <div class="modal-body modalBodyStyle">
+            <!-- <form class="form-inline login">
                 <div class="form-group col-md-6">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                
+                    <label for="inputEmail4 emailLabel">Email</label></li>
+                    <input type="email" class="form-control inputStyle" id="inputEmail4" placeholder="Email"></li>
+                  
                   </div>
                 <div class="form-group">
-                  <label for="inputPassword6">Password</label>
-                  <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+                 <ul>
+                  <label for="inputPassword6 pwLabel">Password</label></li>
+                  <input type="password" id="inputPassword6" class="form-control inputStyle" aria-describedby="passwordHelpInline"></li>
                   <small id="passwordHelpInline" class="text-muted">
                     Must be 8-20 characters long.
                   </small>
+                
+                </div>
+              </form> -->
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email:</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
                 </div>
               </form>
          </div>
          <div class="modal-footer">
-           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-           <button type="button" id="login" class="btn btn-primary">Login</button>
+           
+           <button type="button" id="login" class="btn btn-primary loginBtn">Login</button>
          </div>
        </div>
      </div>
@@ -118,8 +149,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
     <!-- //main -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="js/signup.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
 </body>
