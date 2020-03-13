@@ -26,4 +26,8 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/landing.html"));
     });
 
+    app.get("/homebrew", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/homebrew.html"));
+    });
+
 };
