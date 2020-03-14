@@ -1,43 +1,55 @@
 
 $(document).ready(function () {
 
+
     $('#submit').on('click', function (event) {
         event.preventDefault()
-        const zipcode = $("#zip")
-        $('#box').empty()
-        let zip = zipcode.val().trim()
-        const apikey2 = "1a41ec200c7b7f7559d4516b8eb11abc"
-        const queryURL = "http://api.brewerydb.com/v2/locations/?key=" + apikey2 + "&postalCode=" + zip
+        const beer = $("#beer")
+        const style = $("#style")
+        const category = $("#category")
+        const abv = $("#abv")
+        const description = $("#description")
+        alert("working")
 
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function (res) {
-            console.log(res.data)
 
-            for (let i = 0; i < res.data.length; i++) {
+        const brewPost = {
+            beer: beer.val().trim(),
+            style: style.val().trim(),
+            category: category.val().trim(),
+            abv: abv.val().trim(),
+            description: description.val().trim()
+        };
 
-                $('#box').append(
-                    $('<div/>')
-                        .addClass("card-body opct opacity-60")
-                );
-                $('#box').append(
-                    $('<h5/>')
-                        .addClass("card-title text-center opct opacity-60")
-                        .text(res.data[i].brewery.name)
-                );
-                $('#box').append(
-                    $('<img/>')
-                        .attr('src', res.data[i].brewery.images.medium)
+        if (!brewPost.beer || !brewPost.style || !brewPost.category || !brewPost.abv || !brewPost.description) {
+            return;
+        }
+        // If we have an email and password, run the signUpUser function
+        postBrew(brewPost.beer, brewPost.style, brewPost.category, brewPost.abv, brewPost.description);
+        beer.val("");
+        style.val("");
+        category.val("");
+        abv.val("");
+        description.val("");
+    })
 
-                )
-                $('#box').append(
-                    $('<p/>')
-                        .addClass("text-center")
-                        .text(res.data[i].streetAddress)
-                );
-            }
+    function postBrew(beer, style, category, abv, description) {
 
-        });
-    });
+        $.post("/api/brewpost", {
+            beer: beer,
+            style: style,
+            category: category,
+            abv: abv,
+            description: description
+        })
+            .then(function (data) {
+
+                // sendEmail();
+                window.location.replace("localhost:8080/");
+                console.log(data);// If there's an error, handle it by throwing up a bootstrap alert
+            })
+            .catch((err) => console.log(err));
+
+
+    }
+
 })

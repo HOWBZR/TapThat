@@ -16,6 +16,22 @@ module.exports = function (app) {
             });
     });
 
+    app.post("/api/brewpost", function (req, res) {
+        db.BrewPost.create({
+            beer: req.body.beer,
+            style: req.body.style,
+            category: req.body.category,
+            abv: req.body.abv,
+            description: req.body.description
+        })
+            .then(function () {
+                res.redirect(307, "/");
+            })
+            .catch(function (err) {
+                res.status(401).json(err);
+            });
+    });
+
     app.post("/api/login", passport.authenticate("local"), function (req, res) {
         res.json(req.user);
     });

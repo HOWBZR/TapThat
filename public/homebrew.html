@@ -7,7 +7,7 @@
     <title>TapThat - Add A Homebrew</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style2.css">
 
 </head>
@@ -17,25 +17,25 @@
         <div class="container">
             <div id="navbarResponsive"></div>
             <div id="logo-div">
-            <a href="./landing.html"><img class="nav-logo" src="./Images/TapThat Logo with beer small.png"
-                class="img-fluid rounded float-left navbar-brand" alt="Responsive image"></a> 
-                <p><a class="navlink" href="./Beer.html">find a beer</a> 
-                  <span class="dot"></span> <a class="navlink" href="./brewery.html">breweries</a> 
-                  <span class="dot"></span>  <a class="navlink" href="./question.html">recommendation</a> 
-                  <span class="dot"></span>  <a class="navlink" href="./homebrew.html">homebrews</a></p>           
-                
-                </div>
-                
+                <a href="./landing.html"><img class="nav-logo" src="./Images/TapThat Logo with beer small.png"
+                        class="img-fluid rounded float-left navbar-brand" alt="Responsive image"></a>
+                <p><a class="navlink" href="./Beer.html">find a beer</a>
+                    <span class="dot"></span> <a class="navlink" href="./brewery.html">breweries</a>
+                    <span class="dot"></span> <a class="navlink" href="./question.html">recommendation</a>
+                    <span class="dot"></span> <a class="navlink" href="./homebrew.html">homebrews</a></p>
+
+            </div>
+
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="./signUp.html" data-toggle="modal"
-                    data-target="#exampleModalScrollable">Sign Up
-                    <span class="sr-only"></span>
-                </a>
+                        data-target="#exampleModalScrollable">Sign Up
+                        <span class="sr-only"></span>
+                    </a>
                 </li>
             </ul>
         </div>
-       
+
     </nav>
     <!--end nav-->
 
@@ -51,21 +51,21 @@
 
     <div class="form-group">
         <label for="title">Beer Name</label>
-        <input type="text" class="form-control" id="title">
+        <input id="beer" type="text" class="form-control">
         <br />
         <label for="title">Style</label>
-        <input type="text" class="form-control" id="title">
+        <input id="style" type="text" class="form-control">
         <br />
         <label for="title">Category</label>
-        <input type="text" class="form-control" id="title">
+        <input id="category" type="text" class="form-control">
         <br />
         <label for="title">ABV</label>
-        <input type="text" class="form-control" id="title">
+        <input id="abv" type="text" class="form-control">
         <br />
         <label for="title">Description</label>
-        <input type="text" class="form-control" id="title">
+        <input id="description" type="text" class="form-control">
         <br />
-
+        <button id="submit" class="btn btn-success submit btn-lg">Submit</button>
     </div>
 
 
@@ -80,6 +80,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./assets/css/bubbles.js"></script>
+    <script type="text/javascript" src="js/homebrew.js"></script>
 
 
 </body>
