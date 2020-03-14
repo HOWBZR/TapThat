@@ -17,7 +17,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         category: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
 
         },
         abv: {
@@ -27,16 +27,20 @@ module.exports = function (sequelize, DataTypes) {
         description: {
             type: DataTypes.TEXT,
             allowNull: false,
+        },
+        UserId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
         }
 
     });
-    BrewPost.associate = function (models) {
-        BrewPost.belongsTo(models.Users, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
+    // BrewPost.associate = function (models) {
+    //     BrewPost.belongsTo(models.Users, {
+    //         foreignKey: {
+    //             allowNull: false
+    //         }
+    //     });
+    // };
 
 
     return BrewPost;

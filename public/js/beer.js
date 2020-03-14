@@ -17,11 +17,10 @@ $(document).ready(function () {
             console.log(res.data)
 
             for (let i = 0; i < res.data.length; i++) {
-                let description = res.data[i].style.description;
-                if (!description) {
-                    description = "no description";
+                let description ='Blerg';
+                if (res.data[i].style) {
+                    description = res.data[i].style.description;
                 }
-
 
             $('#box').append(
                 $('<div/>')
