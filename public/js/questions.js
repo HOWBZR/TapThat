@@ -19,7 +19,7 @@ const askQuestion = whichOne => {
 		const choice = questions[whichOne].choices
         const value = questions[whichOne].lastQuestion   ? questions[whichOne].choices:   questions[whichOne].nextQuestion
         
-        const choiceBTN = $("<button id=choice class='btn btn-warning m-2'"+i+"></button>")
+        const choiceBTN = $("<button id=choice class='btn btn-warning m-2'"+i+"></button> <br>")
         console.log(questions[whichOne].lastQuestion);
         choiceBTN.text(choice[i]).val(value[i])
 			// When they answer a question it will grab the value and use it to get to the next question
