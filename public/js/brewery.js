@@ -37,7 +37,8 @@ $(document).ready(function () {
                         .text(res.data[i].streetAddress)
                 );
                 $('#box').append(
-                    "<a class='text-center'>" + res.data[i].brewery.website + "</a>"
+                    "<a class='text-center' href="+ 'res.data[i].website' +">" 
+                    + res.data[i].website + "</a>"
                 );
             }
 
