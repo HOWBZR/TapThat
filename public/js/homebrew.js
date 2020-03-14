@@ -48,7 +48,6 @@ $(document).ready(function () {
         })
             .then(function (data) {
 
-                // sendEmail();
                 window.location.replace("localhost:8080/");
                 console.log(data);// If there's an error, handle it by throwing up a bootstrap alert
             })

@@ -37,7 +37,11 @@ $(document).ready(function () {
                         .text(res.data[i].streetAddress)
                 );
                 $('#box').append(
+<<<<<<< HEAD
+                    "<a class='text-center' href="+ res.data[i].website +">" 
+=======
                     "<a class='text-center' href='http://www.brewerydb.com/'>" 
+>>>>>>> b0467495e05c00799fc05b466c0f522e6eb6a43a
                     + res.data[i].website + "</a>"
                 );
                 console.log(res.data[i].website)

@@ -91,14 +91,12 @@ $(document).ready(function () {
         })
             .then(function (data) {
                 localStorage.setItem("id", data.id)
+                alert("Success!")
                 window.location.replace("/homebrew");
-                // console.log(data)
-                // userData(data);
-                // userId(data);
-                // alert("Success!")
-                // If there's an error, log the error
+
             })
             .catch(function (err) {
+                alert("Oops, something went wrong, please check that you typed your username and password correctly.")
                 console.log(err);
             });
     }
