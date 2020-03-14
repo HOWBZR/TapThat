@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TapThat - Add A Homebrew</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style2.css">
+
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar nav-style navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <div id="navbarResponsive"></div>
+            <div id="logo-div">
+                <a href="./landing.html"><img class="nav-logo" src="./Images/TapThat Logo with beer small.png"
+                        class="img-fluid rounded float-left navbar-brand" alt="Responsive image"></a>
+                <p><a class="navlink" href="./Beer.html">find a beer</a>
+                    <span class="dot"></span> <a class="navlink" href="./brewery.html">breweries</a>
+                    <span class="dot"></span> <a class="navlink" href="./question.html">recommendation</a>
+                    <span class="dot"></span> <a class="navlink" href="./homebrew.html">homebrews</a></p>
+            </div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./signUp.html">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--end nav-->
+
+    <div class="jumbotron jumbo-style padding position">
+        <h1 class="display-4 particletext bubbles2">Add A Homebrew</h1>
+        <p class="lead text-warning">Tell us about it...</p>
+        <hr class="my-4">
+        <div class="form-group">
+
+            <label for="title" class="lead text-warning">Beer Name</label>
+            <input id="beer" type="text" class="form-control form3">
+            <br />
+            <label for="title" class="lead text-warning">Style</label>
+            <input id="style" type="text" class="form-control form3">
+            <br />
+            <label for="title" class="lead text-warning"">Category</label>
+            <input id="category" type="text" class="form-control form3">
+            <br />
+            <label for="title" class="lead text-warning">ABV</label>
+            <input id="abv" type="text" class="form-control form3">
+            <br />
+            <label for="title" class="lead text-warning">Description</label>
+            <input id="description" type="text" class="form-control form3" rows="4">
+            <br />
+            <button id="submit" class="btn btn-bubble btn-success submit btn-lg">Submit</button>
+        </div>
+    </div>
+    <footer class="py-3 nav-style">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; TAPTHAT 2020</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./assets/css/bubbles.js"></script>
+    <script type="text/javascript" src="js/homebrew.js"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
+
+
+</body>
+
+</html>

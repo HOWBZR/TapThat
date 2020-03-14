@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TapThat - Let Us Find Your Kind Of Beer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="./assets/css/style2.css">
+    <link rel="stylesheet" href="./assets/css/questionsStyle.css">
+
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar nav-style navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <div id="navbarResponsive"></div>
+            <div id="logo-div">
+            <a href="./landing.html"><img class="nav-logo" src="./Images/TapThat Logo with beer small.png"
+                class="img-fluid rounded float-left navbar-brand" alt="Responsive image"></a> 
+                <p><a class="navlink" href="./Beer.html">find a beer</a> 
+                  <span class="dot"></span> <a class="navlink" href="./brewery.html">breweries</a> 
+                  <span class="dot"></span>  <a class="navlink" href="./question.html">recommendation</a> 
+                  <span class="dot"></span>  <a class="navlink" href="./homebrew.html">homebrews</a></p>           
+                
+                </div>
+                
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./signUp.html">Sign Up</a>
+                    </li>
+                </ul>
+        </div>
+       
+    </nav>
+    <!--end nav-->
+
+    <div class="jumbotron jumbo-style padding position">
+        <h1 class="display-4 particletext bubbles2">Let us find your kind of beer...</h1>
+        <hr class="my-4">
+       <!--start questions-->
+
+       <div class="wrapper">
+        <div class="container">
+            <div id="quiz" class="justify-center flex-column">
+                <div class="quiz-box">
+                    <!--this is where the question will display it is changed
+            dynamically through the js-->
+                    <h2 id="question"></h2>
+
+                    <!--these are where the answers will display, changes dynamcally through js-->
+                    <div class="option-container">
+                        
+                       
+                    </div>
+                   
+                    <div class="beer-recommendation">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <center><a class="btn btn-bubble btn-primary btn-lg" href="./Beer.html" role="button">Find Beers</a></center>
+    </div>
+       <!--end questions-->
+        <footer class="py-3 nav-style">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; TAPTHAT 2020</p>
+            </div>
+       
+
+
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./assets/css/bubbles.js"></script>
+        <script type="text/javascript" src="./js/questions.js"></script>
+
+
+</body>
+
+</html>

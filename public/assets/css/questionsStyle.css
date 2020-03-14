@@ -1,0 +1,36 @@
+ .quiz-box {
+      background-color: black;
+      position: static;
+      padding: 50px;
+      border: 1px solid #c15911;
+      /* background-color: #ffe6ea; */
+  }
+/* commented out so buttons can be responsive.  */
+  /* .option-container {
+    border-radius: 25px;
+    display: flex;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid #2f404e40;
+    background-color: black;
+  } */
+  
+  .option-container:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 20px 0 #c15a1193;
+    transform: translateY(-1px);
+    transition: transform 150ms;
+  }
+  
+  .option-text {
+    border-radius: 25px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  p{
+    font-size: 40px;
+    color: #eeb12d;
+    text-align: center;
+  }
