@@ -37,9 +37,17 @@ $(document).ready(function () {
                         .text(res.data[i].streetAddress)
                 );
                 $('#box').append(
+<<<<<<< HEAD
                     "<a class='text-center' href='"+ res.data[i].website +"'>" 
+=======
+
+                    "<a class='text-center' href='"+ res.data[i].website +"'>" 
+
+
+>>>>>>> 7a1df76312f6aebeac61e5ee03ca39efe6d40c3b
                     + res.data[i].website + "</a>"
                 );
+                // console.log(res.data[i].website)
             }
 
         });
