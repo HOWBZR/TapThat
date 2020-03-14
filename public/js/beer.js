@@ -14,13 +14,18 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (res) {
-            // console.log(res.data)
+            console.log(res.data)
 
             for (let i = 0; i < res.data.length; i++) {
+                let description = res.data[i].style.description;
+                if (!description) {
+                    description = "no description";
+                }
+
 
             $('#box').append(
                 $('<div/>')
-                    .addClass("card-body border")
+                    .addClass("card-body border-light")
             );
             $('#box').append(
                 $('<h3/>')
@@ -50,7 +55,7 @@ $(document).ready(function () {
             $('#box').append(
                 $('<p/>')
                     .addClass("text-center")
-                    .text(res.data[i].style.description)
+                    .text(description)
             );
         }
 
