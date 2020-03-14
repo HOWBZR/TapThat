@@ -36,6 +36,9 @@ $(document).ready(function () {
                         .addClass("text-center")
                         .text(res.data[i].streetAddress)
                 );
+                $('#box').append(
+                    "<a class='text-center'>" + res.data[i].brewery.website + "</a>"
+                );
             }
 
         });
