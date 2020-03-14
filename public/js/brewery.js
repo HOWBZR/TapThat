@@ -40,6 +40,7 @@ $(document).ready(function () {
                     "<a class='text-center' href='"+ res.data[i].website +"'>" 
                     + res.data[i].website + "</a>"
                 );
+                // console.log(res.data[i].website)
             }
 
         });
