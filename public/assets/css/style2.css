@@ -64,6 +64,24 @@ background-color: black;
   background-color: white;
 }
 
+.form3 {
+  background-color: black;
+  border: solid 1px #c15911;
+
+}
+
+.form3:focus {
+  outline: none;
+  background-color: black;
+  border: solid 1px #c15911;
+  color: #c15911;
+  
+}
+
+option {
+  color: white;
+}
+
 .btn-bubble {
   color: white;
   background-color: #c15911;
