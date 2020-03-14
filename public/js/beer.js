@@ -17,18 +17,10 @@ $(document).ready(function () {
             // console.log(res.data)
 
             for (let i = 0; i < res.data.length; i++) {
-<<<<<<< HEAD
                 let description ='Blerg';
                 if (res.data[i].style) {
                     description = res.data[i].style.description;
                 }
-=======
-                let description = res.data[i].style.description;
-                if (!description) {
-                    description = "no description";
-                }
-
->>>>>>> 852a75919ae89a00a6135f3d14405855091d7fc4
 
             $('#box').append(
                 $('<div/>')

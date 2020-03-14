@@ -33,12 +33,12 @@ module.exports = function (sequelize, DataTypes) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
     });
 
-    Users.associate = function (models) {
-        // Associating Author with Posts
-        // When an Author is deleted, also delete any associated Posts
-        Users.hasMany(models.BrewPost, {
-            onDelete: "cascade"
-        });
-    };
+    // Users.associate = function (models) {
+    //     // Associating Author with Posts
+    //     // When an Author is deleted, also delete any associated Posts
+    //     Users.hasMany(models.BrewPost, {
+    //         onDelete: "cascade"
+    //     });
+    // };
     return Users;
 };

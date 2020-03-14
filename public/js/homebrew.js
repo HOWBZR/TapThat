@@ -4,15 +4,18 @@ $(document).ready(function () {
 
     $('#submit').on('click', function (event) {
         event.preventDefault()
+
+        let UserId = localStorage.getItem("id");
         const beer = $("#beer")
         const style = $("#style")
         const category = $("#category")
         const abv = $("#abv")
         const description = $("#description")
-        alert("working")
+        alert(UserId)
 
 
         const brewPost = {
+            UserId: UserId,
             beer: beer.val().trim(),
             style: style.val().trim(),
             category: category.val().trim(),
@@ -24,7 +27,8 @@ $(document).ready(function () {
             return;
         }
         // If we have an email and password, run the signUpUser function
-        postBrew(brewPost.beer, brewPost.style, brewPost.category, brewPost.abv, brewPost.description);
+        postBrew(brewPost.UserId, brewPost.beer, brewPost.style, brewPost.category, brewPost.abv, brewPost.description);
+        UserId;
         beer.val("");
         style.val("");
         category.val("");
@@ -32,9 +36,10 @@ $(document).ready(function () {
         description.val("");
     })
 
-    function postBrew(beer, style, category, abv, description) {
+    function postBrew(id, beer, style, category, abv, description) {
 
         $.post("/api/brewpost", {
+            UserId: id,
             beer: beer,
             style: style,
             category: category,
@@ -50,6 +55,12 @@ $(document).ready(function () {
             .catch((err) => console.log(err));
 
 
+    }
+
+    function getBrew() {
+        $.get(`/api/brewpost/${localStorage.getItem(id)}`).then(function (data) {
+            
+        })
     }
 
 })

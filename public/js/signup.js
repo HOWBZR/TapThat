@@ -78,6 +78,9 @@ $(document).ready(function () {
         loginUser(userData.email, userData.password);
         emailInputL.val("");
         passwordInputL.val("");
+
+
+
     });
 
     // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
@@ -86,15 +89,33 @@ $(document).ready(function () {
             email: email,
             password: password
         })
-            .then(function () {
+            .then(function (data) {
+                localStorage.setItem("id", data.id)
                 window.location.replace("/homebrew");
-                alert("working")
+                // console.log(data)
+                // userData(data);
+                // userId(data);
+                // alert("Success!")
                 // If there's an error, log the error
             })
             .catch(function (err) {
                 console.log(err);
             });
     }
+
+    function userData(data) {
+        // console.log(data)
+        alert("Welcome! " + data.username)
+        console.log(data)
+        $.get("/api/user_data").then(function (data) {
+            $("#userdata").text(data.id);
+            console.log(data)
+        });
+    }
+
+
+
+
 
 
 
