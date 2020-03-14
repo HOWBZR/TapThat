@@ -1,0 +1,32 @@
+$bg: #5D504C;
+body { margin: 0; background-color: $bg; }
+.container {
+  width: 75vw;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.bg { fill: $bg; }
+.foam { fill: #fbefdb; }
+.glass{ fill: #fff; opacity:0.1; }
+.yellow { fill: #fcb143; }
+
+#foam,
+.liquids {
+  clip-path:url(#clip);
+}
+
+#text-svg { fill: rgba(#fbefdb, .7); visibility: hidden; }
+
+@for $i from 2 through 10 {
+  #liquid_#{$i} {
+    visibility: hidden;
+  }
+}
+
+#bubbles,
+#foam_1,
+#foam_2,
+#text-beer{
+  visibility: hidden;
+}
