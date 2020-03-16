@@ -7,7 +7,7 @@ $(document).ready(function () {
         $('#box').empty()
         let zip = zipcode.val().trim()
         const apikey2 = "1a41ec200c7b7f7559d4516b8eb11abc"
-        const queryURL = "http://api.brewerydb.com/v2/locations/?key=" + apikey2 + "&postalCode=" + zip
+        const queryURL = "https://api.brewerydb.com/v2/locations/?key=" + apikey2 + "&postalCode=" + zip
 
         $.ajax({
             url: queryURL,
@@ -38,7 +38,7 @@ $(document).ready(function () {
                 );
                 $('#box').append(
 
-                    "<a class='text-center' href='"+ res.data[i].website +"'>" 
+                    "<a class='text-center' href='" + res.data[i].website + "'>"
 
 
                     + res.data[i].website + "</a>"

@@ -13,13 +13,13 @@ Tap That utilizies the breweryDB API to pull a list of beers, breweries, and oth
 Brew expert? Come showcase your beer by sharing your beer information on our site. 
 
 ### Technologies used:
-Bootsrap 4 (Cards, Modal)
-Express.js 
-Heroku
-JawsDB
-MySQL
-Node.js
-Sequelize
+-Bootsrap 4 (Cards, Modal)
+-Express.js 
+-Heroku
+-JawsDB
+-MySQL
+-Node.js
+-Sequelize
 
 ## Getting Started
 
@@ -28,7 +28,7 @@ MySQL
 Node.js
 
 ### View
-View site from Heroku at: <"insert link here">.
+View site from Heroku at: https://tapthatcorona.herokuapp.com/homebrew.
 
 ## Autors/Contributors
 J. Stanley, Jim Carlson, Shauna McGrail, David Coons
