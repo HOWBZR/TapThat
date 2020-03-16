@@ -3,8 +3,6 @@ Got Beer?
 
 A Full stack web application allowing you to tap that beer. 
 
-Direct link to app: 
-
 # Home Page
 <img alt="landing page of tap that site" src="https://raw.githubusercontent.com/HOWBZR/TapThat/Test/public/Images/tapthat.gif">
 
@@ -28,7 +26,6 @@ MySQL
 Node.js
 
 ### View
-View site from Heroku at: https://tapthatcorona.herokuapp.com/homebrew.
 
 ## Autors/Contributors
 J. Stanley, Jim Carlson, Shauna McGrail, David Coons
