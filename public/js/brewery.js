@@ -6,7 +6,7 @@ $(document).ready(function () {
         const zipcode = $("#zip")
         $('#box').empty()
         let zip = zipcode.val().trim()
-        const apikey2 = "1a41ec200c7b7f7559d4516b8eb11abc"
+        const apikey2 = ""
         const queryURL = "https://api.brewerydb.com/v2/locations/?key=" + apikey2 + "&postalCode=" + zip
 
         $.ajax({
